@@ -5,7 +5,7 @@ const Message = ({ user, message, className }) => {
   if (user) {
     return (
       <div className={`messageBox ${className}`}>
-        <span>{`${user}: ${message}`}</span>
+        <span className="text-start">{`${user}: ${message}`}</span>
       </div>
     );
   } else {

@@ -13,11 +13,16 @@
   float: right;
   background-color: orange;
   color: white;
-  text-align: right;
+  text-align: left;
 }
 
 .left {
   float: left;
   text-align: left;
   background-color: rgb(255, 235, 205);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
 }
