@@ -12,14 +12,15 @@ const sendUser = () => {
 
 const Join = () => {
   const [name, setName] = useState("");
-  console.log(name);
   return (
     <div className="joinPage">
       <div className="joinContainer mx-auto px-5 py-3">
-        <img src={logo} alt="logo.png" />
-        <h1 className="text-white">
-          Welcome to <span style={{ color: "orange" }}>MyChat</span>
-        </h1>
+        <div className="d-flex flex-column  align-items-center ">
+          <img width="100px" src={logo} alt="logo.png" />
+          <h1 className="text-white">
+            Welcome to <span style={{ color: "orange" }}>MyChat</span>
+          </h1>
+        </div>
         <div className="d-flex justify-content-center align-items-center p-3">
           <input
             onChange={(e) => setName(e.target.value)}

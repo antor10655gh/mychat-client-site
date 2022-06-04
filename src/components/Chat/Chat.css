@@ -15,25 +15,33 @@
 
 .header {
   background-color: orange;
-  height: 15%;
+  height: 10%;
 }
 
 .chatBox {
-  height: 70%;
+  height: 80%;
   box-sizing: border-box;
 }
 
 .inputBox {
-  height: 15%;
+  height: 10%;
   border-top: 2px solid black;
   display: flex;
 }
 
 #chatInput {
   width: 80%;
+  padding-left: 2vmax;
   border: none;
+  box-sizing: border-box;
+  outline: none;
 }
 
 .sendBtn {
-  width: 20%;
+  width: 21%;
+  transition: all 0.4s;
+}
+
+.sendBtn:hover {
+  background-color: rgb(255, 123, 0);
 }
