@@ -5,6 +5,7 @@ import socketIo from "socket.io-client";
 import Message from "../Message/Message";
 import ReactScrollToBottom from "react-scroll-to-bottom";
 import logo from "../../images/logo-orange.png";
+import closeIcon from "../../images/closeIcon.png";
 
 let socket;
 
@@ -62,9 +63,15 @@ const Chat = () => {
   return (
     <div className="chatPage">
       <div className="chatContainer">
-        <div className="header d-flex justify-content-center  p-2">
-          <img src={logo} alt="" />
-          <h3 className="px-2 text-white">MyChat</h3>
+        <div className="header d-flex justify-content-between align-items-center p-3">
+          <div className="d-flex">
+            <img src={logo} alt="" />
+            <h3 className="px-2 text-white">MyChat</h3>
+          </div>
+          <a href="/">
+            {" "}
+            <img width="15px" height="15px" src={closeIcon} alt="" />
+          </a>
         </div>
         <ReactScrollToBottom className="chatBox">
           {messages.map((message) => (

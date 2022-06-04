@@ -11,7 +11,7 @@
 
 .right {
   float: right;
-  background-color: orange;
+  background-color: rgb(255, 115, 0);
   color: white;
   text-align: left;
 }
@@ -19,7 +19,7 @@
 .left {
   float: left;
   text-align: left;
-  background-color: rgb(255, 235, 205);
+  background-color: rgb(226, 226, 226);
 }
 
 .btn:focus {
