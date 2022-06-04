@@ -1,14 +1,13 @@
 import React from "react";
-import socketIO from "socket.io-client";
 import "./Chat.css";
-
-const ENDPOINT = "http://localhost:5000/";
-const socket = socketIO(ENDPOINT, { transports: ["websocket"] });
+import { user } from "../Join/Join";
 
 const Chat = () => {
-  socket.on("connect", () => {});
-
-  return <div></div>;
+  return (
+    <div>
+      <h1>Hi {user}</h1>
+    </div>
+  );
 };
 
 export default Chat;
