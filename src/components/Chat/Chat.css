@@ -51,4 +51,16 @@
     width: 90%;
     height: 90%;
   }
+  .inputBox {
+    height: 11%;
+  }
+
+  #chatInput {
+    width: 70%;
+  }
+
+  .sendBtn {
+    width: 31%;
+    transition: all 0.4s;
+  }
 }
