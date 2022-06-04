@@ -14,8 +14,8 @@ const Join = () => {
   const [name, setName] = useState("");
   console.log(name);
   return (
-    <div className="chattingPage">
-      <div className="chattingContainer mx-auto px-5 py-3">
+    <div className="joinPage">
+      <div className="joinContainer mx-auto px-5 py-3">
         <img src={logo} alt="logo.png" />
         <h1 className="text-white">
           Welcome to <span style={{ color: "orange" }}>MyChat</span>
