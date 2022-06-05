@@ -9,9 +9,10 @@ import closeIcon from "../../images/closeIcon.png";
 
 let socket;
 
-const ENDPOINT = "http://localhost:5000/";
+const ENDPOINT = "https://mychat-apk.herokuapp.com/";
 
 const Chat = () => {
+  const audio = new Audio("../../audio/notification_sound.mp3");
   const [id, setId] = useState("");
   const [messages, setMessages] = useState([]);
   const send = () => {
@@ -32,11 +33,13 @@ const Chat = () => {
 
     socket.on("welcome", (data) => {
       setMessages([...messages, data]);
+      audio.play();
       console.log(data.user, data.message);
     });
 
     socket.on("userJoined", (data) => {
       setMessages([...messages, data]);
+      audio.play();
       console.log(data.user, data.message);
     });
 
