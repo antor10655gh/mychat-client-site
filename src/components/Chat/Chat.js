@@ -6,13 +6,13 @@ import Message from "../Message/Message";
 import ReactScrollToBottom from "react-scroll-to-bottom";
 import logo from "../../images/logo-orange.png";
 import closeIcon from "../../images/closeIcon.png";
+import audioFile from "../../audio/notification_sound.mp3";
 
 let socket;
-
+const audio = new Audio(`${audioFile}`);
 const ENDPOINT = "https://mychat-apk.herokuapp.com/";
 
 const Chat = () => {
-  const audio = new Audio("../../audio/notification_sound.mp3");
   const [id, setId] = useState("");
   const [messages, setMessages] = useState([]);
   const send = () => {
@@ -39,7 +39,6 @@ const Chat = () => {
 
     socket.on("userJoined", (data) => {
       setMessages([...messages, data]);
-      audio.play();
       console.log(data.user, data.message);
     });
 

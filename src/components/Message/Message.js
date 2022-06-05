@@ -1,7 +1,13 @@
 import React from "react";
 import "./Message.css";
+import audioFile from "../../audio/notification_sound.mp3";
+
+const audio = new Audio(`${audioFile}`);
 
 const Message = ({ user, message, className }) => {
+  if (className === "left") {
+    audio.play();
+  }
   if (user) {
     return (
       <div className={`messageBox ${className}`}>
